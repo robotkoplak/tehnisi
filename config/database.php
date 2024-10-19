@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $dbname = 'aplikasi_tiket';
-$username = 'root';
-$password = '';
+$username = 'user_tiket';  // Ganti dengan username yang Anda buat
+$password = 'password_anda'; // Ganti dengan password yang Anda buat
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
