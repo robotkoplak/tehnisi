@@ -26,6 +26,6 @@ switch ($route) {
         break;
     default:
         http_response_code(404);
-        require '../views/404.php';  // Pastikan file ini ada juga
+        require '../views/404.php';  // Pastikan file ini ada
         break;
 }
