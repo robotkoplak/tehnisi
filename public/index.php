@@ -7,7 +7,7 @@ $route = $_GET['route'] ?? 'home';
 
 switch ($route) {
     case 'home':
-        require '../views/home.php';
+        require '../views/home.php';  // Pastikan path ini benar
         break;
     case 'login':
         require '../views/login.php';
@@ -24,9 +24,8 @@ switch ($route) {
         checkUserRole('reviewer');
         require '../views/reviewer/dashboard.php';
         break;
-    // Tambahkan rute lainnya
     default:
         http_response_code(404);
-        require '../views/404.php';
+        require '../views/404.php';  // Pastikan file ini ada juga
         break;
 }
