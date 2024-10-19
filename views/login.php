@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     if (login($username, $password)) {
-        redirect('dashboard.php');
+        redirect('admin/dashboard.php'); // Ganti dengan rute yang sesuai
     } else {
         $error = "Username atau password salah";
     }

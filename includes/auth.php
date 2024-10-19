@@ -23,7 +23,8 @@ function login($username, $password) {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        setUserSession($user);
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_role'] = $user['role'];
         return true;
     }
     return false;
